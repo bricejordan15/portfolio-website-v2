@@ -1,0 +1,612 @@
+button {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 100px;
+  padding: 1rem 1.3rem;
+  margin: 0;
+  text-decoration: none;
+  background: black;
+  color: #ffffff;
+  font-family: "Space Grotesk", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+button:hover,
+button:focus {
+  background: black;
+}
+
+/* button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+} */
+
+button:active {
+  transform: scale(0.95);
+}
+
+hr {
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 1.5px black;
+}
+
+#dark-mode-icon {
+  width: 20px;
+}
+
+.caption {
+  color: white;
+  font-size: small;
+  font-family: "Inter", sans-serif;
+}
+
+.modal {
+  height: 100%;
+  width: 70%;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  scrollbar-width: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+.modal img {
+  width: 100%;
+}
+
+.modal .x-button {
+  position: fixed;
+  float: right;
+  margin-left: 0px;
+  scale: 0.5;
+}
+
+.modal::backdrop {
+  background-color: black;
+  opacity: 0.8;
+}
+
+.email-link {
+  color: blue;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  margin: 10% 10% 5% 10%;
+  height: auto;
+  column-gap: 10px;
+}
+
+.header-container h1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Space Grotesk", monospace;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1.8rem;
+  text-align: left;
+  color: black;
+}
+
+.light-mode-icon {
+  display: none;
+}
+
+.dark-mode-icon {
+  display: none;
+}
+
+.switch-box {
+  height: auto;
+}
+
+.switch-whole {
+  position: relative;
+  text-align: right;
+  top: 34%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 9px;
+  width: 9px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border: solid 2px black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.description {
+  margin: 0 10% 25px 10%;
+}
+
+.description p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 18px;
+  color: black;
+}
+
+.section-header-container {
+  display: block;
+  margin: 5% 10% 5% 10%;
+  height: auto;
+  column-gap: 30px;
+}
+
+.section-header {
+  height: auto;
+}
+
+.section-header h2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Space Grotesk", monospace;
+  font-weight: 700;
+  font-size: 0.79rem;
+  margin: 0;
+  line-height: 1.8rem;
+  text-align: left;
+  color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.grid-item {
+  background-color: #ccc;
+  padding: 0;
+  text-align: center;
+  height: 36vw;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 3px solid white;
+}
+
+.design-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.work-experience-container {
+  margin: 0% 10% 5% 10%;
+}
+
+.work-experience-section h3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Space Grotesk", monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1rem;
+  text-align: left;
+  color: black;
+}
+
+.work-experience-section h4 {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Space Grotesk", monospace;
+  font-weight: 400;
+  font-size: 0.6rem;
+  margin: 0;
+  line-height: 1rem;
+  text-align: left;
+  color: black;
+}
+
+.work-experience-section p {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  line-height: 1rem;
+  text-align: left;
+  color: black;
+}
+
+.skills-section-container {
+  margin: 0% 10% 5% 10%;
+}
+
+.skills-section h3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Space Grotesk", monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1rem;
+  text-align: left;
+  color: black;
+}
+
+.skills-section p {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  line-height: 1rem;
+  text-align: left;
+  color: black;
+}
+
+.link-section-container {
+  margin: 5% 10% 15% 10%;
+}
+
+.link-icon {
+  width: 50px;
+  height: 50px;
+  padding-right: 20px;
+  opacity: 0.7;
+}
+
+.link-icon:hover {
+  opacity: 1;
+}
+
+@media (min-width: 325px) {
+  .header-container h1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .header-container h1 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+  .section-header h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .description {
+    margin: 0 10% 40px 10%;
+  }
+  .header-container h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .switch-whole {
+    top: 25%;
+  }
+  .grid-container {
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  .header-container h1 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .caption {
+    font-size: large;
+  }
+  .modal .x-button {
+    margin-left: 10px;
+    scale: 0.7;
+  }
+}
+
+@media (min-width: 800px) {
+  .header-container h1 {
+    font-size: 2.4rem;
+    line-height: 1.5rem;
+  }
+  .description p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .section-header-container {
+    margin: 4% 10% 4% 10%;
+  }
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .work-experience-section h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .work-experience-section h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .work-experience-section p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .skills-section h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .skills-section p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .link-icon {
+    width: 50px;
+    height: 50px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid-container {
+    grid-template-columns: auto auto auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .header-container h1 {
+    font-size: 3.1rem;
+    line-height: 1.7rem;
+  }
+  .switch {
+    width: 60px;
+    height: 34px;
+  }
+
+  .slider:before {
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    border: solid 4px black;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .switch-whole {
+    top: 0%;
+  }
+  .description p {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .header-container {
+    margin: 10% 10% 4% 10%;
+  }
+  .work-experience-section h3 {
+    font-size: 22px;
+    line-height: 35px;
+  }
+  .work-experience-section h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .work-experience-section p {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+  .skills-section h3 {
+    font-size: 22px;
+    line-height: 35px;
+  }
+  .skills-section p {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+  .link-icon {
+    width: 50px;
+    height: 50px;
+    padding-right: 15px;
+  }
+  .grid-item {
+    height: 18vw;
+  }
+  .design-image {
+    width: 100%;
+    object-fit: cover;
+  }
+  .caption {
+    font-size: x-large;
+  }
+  .modal .x-button {
+    margin-left: 15px;
+    scale: 0.9;
+  }
+}
+
+@media (min-width: 1300px) {
+  .header-container h1 {
+    font-size: 4rem;
+    line-height: 1.7rem;
+  }
+  .description p {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+  .section-header-container {
+    margin: 4% 10% 4% 10%;
+  }
+  .work-experience-section h3 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .work-experience-section h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .work-experience-section p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .skills-section h3 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .skills-section p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .link-icon {
+    width: 75px;
+    height: 75px;
+    padding-right: 30px;
+  }
+  .caption {
+    font-size: xx-large;
+  }
+  .modal {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .header-container h1 {
+    font-size: 4.7rem;
+    line-height: 1.7rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .header-container h1 {
+    font-size: 5.5rem;
+    line-height: 1.7rem;
+  }
+  .description p {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .work-experience-section p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .skills-section p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .section-header h2 {
+    font-size: 3.2rem;
+  }
+  .work-experience-section h3 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .work-experience-section h4 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .skills-section h3 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .skills-section p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .header-container h1 {
+    font-size: 6.5rem;
+    line-height: 1.7rem;
+  }
+  .modal {
+    width: 50%;
+  }
+}
