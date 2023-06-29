@@ -17,6 +17,7 @@ const gridItemArray = document.querySelectorAll(".grid-item");
 const modalArray = document.querySelectorAll(".modal");
 const dialogArray = document.querySelectorAll("dialog");
 const xButtonArray = document.querySelectorAll(".x-button");
+const navBarArray = document.querySelectorAll(".nav-bar-link");
 
 /* Closes modal upon clicking outside window or clicking X button,
 also makes body scrollable again. */
@@ -31,19 +32,21 @@ function onClick(event) {
 
 /* Changes look of entire page to "dark mode". */
 function darkMode() {
-  document.body.style.backgroundColor = "#2b2b2b";
+  document.body.style.backgroundColor = "#38363a";
   document.querySelector("h1").style.color = "white";
   document.querySelector(".email-link").style.color = "cyan";
   document.querySelector("#linkedin-icon").src = "imgs/linkedin_white.png";
   document.querySelector("#codepen-icon").src = "imgs/codepen_white.png";
   document.querySelector("#github-icon").src = "imgs/github_white.png";
+  document.querySelector(".dark-mode-icon").src = "imgs/darkmodewhite.svg";
+  document.querySelector(".light-mode-icon").src = "imgs/lightmodewhite.svg";
   for (let i = 0; i < gridItemArray.length; i++) {
-    gridItemArray[i].style.border = "3px solid #2b2b2b";
+    gridItemArray[i].style.border = "3px solid #38363a";
     gridItemArray[i].addEventListener("mouseenter", () => {
       gridItemArray[i].style.border = "3px solid #ccc";
     });
     gridItemArray[i].addEventListener("mouseleave", () => {
-      gridItemArray[i].style.border = "3px solid #2b2b2b";
+      gridItemArray[i].style.border = "3px solid #38363a";
     });
     gridItemArray[i].addEventListener("click", () => {
       modalArray[i].showModal();
@@ -65,24 +68,29 @@ function darkMode() {
   for (let i = 0; i < pArray.length; i++) {
     pArray[i].style.color = "white";
   }
+  for (let i = 0; i < navBarArray.length; i++) {
+    navBarArray[i].style.color = "white";
+  }
 }
 
 /* Changes look of entire page to "light mode". Page is in "light mode"
 by default. */
 function lightMode() {
-  document.body.style.backgroundColor = "#ebe8e2";
-  document.querySelector("h1").style.color = "#3b3b3b";
+  document.body.style.backgroundColor = "#f5f5f5";
+  document.querySelector("h1").style.color = "#38363a";
   document.querySelector(".email-link").style.color = "blue";
   document.querySelector("#linkedin-icon").src = "imgs/linkedin.png";
   document.querySelector("#codepen-icon").src = "imgs/codepen.png";
   document.querySelector("#github-icon").src = "imgs/github.png";
+  document.querySelector(".dark-mode-icon").src = "imgs/darkmode.svg";
+  document.querySelector(".light-mode-icon").src = "imgs/lightmode.svg";
   for (let i = 0; i < gridItemArray.length; i++) {
-    gridItemArray[i].style.border = "3px solid #ebe8e2";
+    gridItemArray[i].style.border = "3px solid #f5f5f5";
     gridItemArray[i].addEventListener("mouseenter", () => {
-      gridItemArray[i].style.border = "3px solid #3b3b3b";
+      gridItemArray[i].style.border = "3px solid #38363a";
     });
     gridItemArray[i].addEventListener("mouseleave", () => {
-      gridItemArray[i].style.border = "3px solid #ebe8e2";
+      gridItemArray[i].style.border = "3px solid #f5f5f5";
     });
     gridItemArray[i].addEventListener("click", () => {
       modalArray[i].showModal();
@@ -91,19 +99,22 @@ function lightMode() {
   }
 
   for (let i = 0; i < hrArray.length; i++) {
-    hrArray[i].style.border = "solid 1.5px #3b3b3b";
+    hrArray[i].style.border = "solid 1.5px #38363a";
   }
   for (let i = 0; i < h2Array.length; i++) {
-    h2Array[i].style.color = "#3b3b3b";
+    h2Array[i].style.color = "#38363a";
   }
   for (let i = 0; i < h3Array.length; i++) {
-    h3Array[i].style.color = "#3b3b3b";
+    h3Array[i].style.color = "#38363a";
   }
   for (let i = 0; i < h4Array.length; i++) {
-    h4Array[i].style.color = "#3b3b3b";
+    h4Array[i].style.color = "#38363a";
   }
   for (let i = 0; i < pArray.length; i++) {
-    pArray[i].style.color = "#3b3b3b";
+    pArray[i].style.color = "#38363a";
+  }
+  for (let i = 0; i < navBarArray.length; i++) {
+    navBarArray[i].style.color = "#38363a";
   }
 }
 
