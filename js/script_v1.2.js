@@ -32,7 +32,8 @@ function onClick(event) {
 
 /* Changes look of entire page to "dark mode". */
 function darkMode() {
-  document.body.style.backgroundColor = "#38363a";
+  document.body.style.backgroundColor = "black";
+  document.querySelector(".back-to-top-button").style.color = "white";
   document.querySelector("h1").style.color = "white";
   document.querySelector(".email-link").style.color = "cyan";
   document.querySelector("#linkedin-icon").src = "imgs/linkedin_white.png";
@@ -41,12 +42,12 @@ function darkMode() {
   document.querySelector(".dark-mode-icon").src = "imgs/darkmodewhite.svg";
   document.querySelector(".light-mode-icon").src = "imgs/lightmodewhite.svg";
   for (let i = 0; i < gridItemArray.length; i++) {
-    gridItemArray[i].style.border = "3px solid #38363a";
+    gridItemArray[i].style.border = "3px solid #787878";
     gridItemArray[i].addEventListener("mouseenter", () => {
-      gridItemArray[i].style.border = "3px solid #ccc";
+      gridItemArray[i].style.border = "3px solid #ffffff";
     });
     gridItemArray[i].addEventListener("mouseleave", () => {
-      gridItemArray[i].style.border = "3px solid #38363a";
+      gridItemArray[i].style.border = "3px solid #787878";
     });
     gridItemArray[i].addEventListener("click", () => {
       modalArray[i].showModal();
@@ -77,6 +78,7 @@ function darkMode() {
 by default. */
 function lightMode() {
   document.body.style.backgroundColor = "#f5f5f5";
+  document.querySelector(".back-to-top-button").style.color = "#38363a";
   document.querySelector("h1").style.color = "#38363a";
   document.querySelector(".email-link").style.color = "blue";
   document.querySelector("#linkedin-icon").src = "imgs/linkedin.png";
@@ -85,12 +87,12 @@ function lightMode() {
   document.querySelector(".dark-mode-icon").src = "imgs/darkmode.svg";
   document.querySelector(".light-mode-icon").src = "imgs/lightmode.svg";
   for (let i = 0; i < gridItemArray.length; i++) {
-    gridItemArray[i].style.border = "3px solid #f5f5f5";
+    gridItemArray[i].style.border = "3px solid #f2f2f2";
     gridItemArray[i].addEventListener("mouseenter", () => {
       gridItemArray[i].style.border = "3px solid #38363a";
     });
     gridItemArray[i].addEventListener("mouseleave", () => {
-      gridItemArray[i].style.border = "3px solid #f5f5f5";
+      gridItemArray[i].style.border = "3px solid #f2f2f2";
     });
     gridItemArray[i].addEventListener("click", () => {
       modalArray[i].showModal();
