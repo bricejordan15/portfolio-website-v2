@@ -58,6 +58,10 @@ hr {
   opacity: 1;
 }
 
+.back-to-top-button:hover {
+  opacity: 0.7;
+}
+
 .caption {
   color: white;
   font-size: small;
@@ -116,6 +120,10 @@ hr {
   color: black;
   font-size: 14px;
   opacity: 1;
+}
+
+.nav-bar a:hover {
+  opacity: 0.7;
 }
 
 .header-container {
@@ -261,7 +269,7 @@ input:checked + .slider:before {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   padding-left: 6.5%;
   padding-right: 6.5%;
   padding-bottom: 5%;
@@ -279,13 +287,6 @@ input:checked + .slider:before {
   cursor: pointer;
   box-sizing: border-box;
   border: 3px solid white;
-  object-position: center;
-  object-fit: cover;
-}
-
-.blur-load {
-  background-size: cover;
-  background-position: center;
 }
 
 .design-image {
@@ -379,6 +380,10 @@ input:checked + .slider:before {
   height: 50px;
   margin-right: 20px;
   opacity: 1;
+}
+
+.link-icon:hover {
+  opacity: 0.7;
 }
 
 @media (min-width: 325px) {
@@ -504,7 +509,7 @@ input:checked + .slider:before {
     column-gap: 20px;
   }
   .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto auto;
     column-gap: 20px;
     row-gap: 20px;
     padding-left: 7.5%;
@@ -591,15 +596,6 @@ input:checked + .slider:before {
   }
   .top-container {
     margin: 5% 7.5% 2% 7.5%;
-  }
-  .back-to-top-button:hover {
-    opacity: 0.7;
-  }
-  .nav-bar a:hover {
-    opacity: 0.7;
-  }
-  .link-icon:hover {
-    opacity: 0.7;
   }
 }
 
